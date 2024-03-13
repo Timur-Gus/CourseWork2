@@ -16,8 +16,17 @@ public class ConstantsQuestionTest {
     public static final Question QUESTION_AND_ANSWER_1 = new Question(QUESTION_1, ANSWER_1);
     public static final Question QUESTION_AND_ANSWER_2 = new Question(QUESTION_2, ANSWER_2);
     public static final Question QUESTION_AND_ANSWER_3 = new Question(QUESTION_3, ANSWER_3);
+    public static final Question MATH_QUESTION_AND_ANSWER = new Question("Question_Math", "Answer_Math");
     public static final List<Question> QUESTIONS = new ArrayList<>(List.of(
             QUESTION_AND_ANSWER_1, QUESTION_AND_ANSWER_2, QUESTION_AND_ANSWER_3
+    ));
+    public static final List<Question> MATH_QUESTIONS = new ArrayList<>(List.of(
+            MATH_QUESTION_AND_ANSWER,
+            new Question("Question_Math_1", "Answer_Math_1")
+    ));
+
+    public static final List<Question> QUESTIONS1 = new ArrayList<>(List.of(
+            QUESTION_AND_ANSWER_2, QUESTION_AND_ANSWER_3
     ));
 
 }

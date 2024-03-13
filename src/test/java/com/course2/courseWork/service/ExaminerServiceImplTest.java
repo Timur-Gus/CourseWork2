@@ -15,29 +15,46 @@ import java.util.List;
 import java.util.Random;
 
 import static com.course2.courseWork.constants.ConstantsQuestionTest.*;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class ExaminerServiceImplTest {
     @Mock
-    private JavaQuestionService questionServiceMock;
+    private JavaQuestionService javaQuestionServiceMock;
+    @Mock
+    private MathQuestionService mathQuestionServiceMock;
+    @Mock
+    private Random randomMock;
+
     @InjectMocks
     private ExaminerServiceImpl exam;
 
     @BeforeEach
     void init() {
-        when(questionServiceMock.getAll())
+        when(javaQuestionServiceMock.getAll())
                 .thenReturn(QUESTIONS);
+        when(javaQuestionServiceMock.getAll())
+                .thenReturn(MATH_QUESTIONS);
     }
 
     @Test
-    void getRandomQuestionsTest() {
-        when(questionServiceMock.getRandomQuestion()).thenReturn(QUESTION_AND_ANSWER_1);
+    void getRandomQuestionsJavaTest() {
+        when(javaQuestionServiceMock.getRandomQuestion()).thenReturn(QUESTION_AND_ANSWER_1);
+        when(randomMock.nextInt(2)).thenReturn(0);
         List<Question> expected = new ArrayList<>(List.of(QUESTION_AND_ANSWER_1));
         Collection<Question> actual = exam.getQuestions(1);
-        System.out.println(exam.getQuestions(1));
-        assertIterableEquals(expected,actual);
+        assertIterableEquals(expected, actual);
+    }
+
+    @Test
+    void getRandomQuestionsMathTest() {
+        when(javaQuestionServiceMock.getRandomQuestion()).thenReturn(MATH_QUESTION_AND_ANSWER);
+        when(randomMock.nextInt(2)).thenReturn(1);
+        List<Question> expected = new ArrayList<>(List.of(MATH_QUESTION_AND_ANSWER));
+        Collection<Question> actual = exam.getQuestions(1);
+        assertIterableEquals(expected, actual);
     }
 
     @Test

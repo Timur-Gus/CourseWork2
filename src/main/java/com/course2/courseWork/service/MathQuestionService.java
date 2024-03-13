@@ -1,7 +1,8 @@
 package com.course2.courseWork.service;
 
+
 import com.course2.courseWork.myInterface.QuestionService;
-import com.course2.courseWork.repository.JavaQuestionRepository;
+import com.course2.courseWork.repository.MathQuestionRepository;
 import com.course2.courseWork.repository.Question;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
@@ -11,11 +12,11 @@ import java.util.Random;
 
 @Service
 @SessionScope
-public class JavaQuestionService implements QuestionService {
-    JavaQuestionRepository questionRepository;
+public class MathQuestionService implements QuestionService {
+    private final MathQuestionRepository questionRepository;
 
-    public JavaQuestionService() {
-        questionRepository = new JavaQuestionRepository();
+    public MathQuestionService() {
+        questionRepository = new MathQuestionRepository();
     }
 
     @Override
@@ -44,4 +45,5 @@ public class JavaQuestionService implements QuestionService {
         return questionRepository.getAll()
                 .get(random.nextInt(questionRepository.getAll().size()));
     }
+
 }

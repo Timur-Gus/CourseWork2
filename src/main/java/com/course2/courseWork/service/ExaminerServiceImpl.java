@@ -1,8 +1,6 @@
 package com.course2.courseWork.service;
 
-import com.course2.courseWork.myInterface.ExaminerService;
-import com.course2.courseWork.myInterface.QuestionService;
-import com.course2.courseWork.repository.Question;
+import model.Question;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;

@@ -2,7 +2,7 @@ package com.course2.courseWork.repository;
 
 import com.course2.courseWork.myException.QuestionAlreadyAddedException;
 import com.course2.courseWork.myException.QuestionNotFound;
-import com.course2.courseWork.myInterface.QuestionRepository;
+import model.Question;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

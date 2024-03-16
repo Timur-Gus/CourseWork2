@@ -2,6 +2,7 @@ package com.course2.courseWork.repository;
 
 import com.course2.courseWork.myException.QuestionAlreadyAddedException;
 import com.course2.courseWork.myException.QuestionNotFound;
+import model.Question;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

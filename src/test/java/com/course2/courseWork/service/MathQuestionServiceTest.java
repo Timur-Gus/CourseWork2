@@ -1,7 +1,7 @@
 package com.course2.courseWork.service;
 
 import com.course2.courseWork.myException.NotImplementedException;
-import com.course2.courseWork.repository.Question;
+import model.Question;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

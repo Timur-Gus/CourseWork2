@@ -1,4 +1,4 @@
-package com.course2.courseWork.repository;
+package model;
 import java.util.Objects;
 
 

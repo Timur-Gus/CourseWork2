@@ -1,6 +1,6 @@
-package com.course2.courseWork.myInterface;
+package com.course2.courseWork.service;
 
-import com.course2.courseWork.repository.Question;
+import model.Question;
 
 import java.util.Collection;
 

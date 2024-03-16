@@ -1,7 +1,7 @@
 package com.course2.courseWork.controllers;
 
-import com.course2.courseWork.myInterface.QuestionService;
-import com.course2.courseWork.repository.Question;
+import com.course2.courseWork.service.QuestionService;
+import model.Question;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

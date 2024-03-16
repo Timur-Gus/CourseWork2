@@ -1,16 +1,13 @@
 package com.course2.courseWork.service;
 
-import com.course2.courseWork.myInterface.QuestionService;
 import com.course2.courseWork.repository.JavaQuestionRepository;
-import com.course2.courseWork.repository.Question;
+import model.Question;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.Collection;
 import java.util.Random;
 
 @Service
-@SessionScope
 public class JavaQuestionService implements QuestionService {
     JavaQuestionRepository questionRepository;
 

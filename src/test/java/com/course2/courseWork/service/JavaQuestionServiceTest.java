@@ -3,7 +3,7 @@ package com.course2.courseWork.service;
 import com.course2.courseWork.myException.QuestionAlreadyAddedException;
 import com.course2.courseWork.myException.QuestionNotFound;
 import com.course2.courseWork.repository.JavaQuestionRepository;
-import com.course2.courseWork.repository.Question;
+import model.Question;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

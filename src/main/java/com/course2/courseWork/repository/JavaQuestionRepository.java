@@ -14,7 +14,7 @@ public class JavaQuestionRepository implements QuestionRepository {
     private final List<Question> questions;
 
     public JavaQuestionRepository() {
-        this.questions = new ArrayList<>();
+        questions = new ArrayList<>();
     }
 
     @Override

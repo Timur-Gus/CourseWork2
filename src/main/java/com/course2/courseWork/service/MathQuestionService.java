@@ -10,7 +10,15 @@ import java.util.Random;
 
 @Service
 public class MathQuestionService implements QuestionService {
+    private final Random random;
 
+    public MathQuestionService(Random random) {
+        this.random = random;
+    }
+
+    public MathQuestionService() {
+        random = new Random();
+    }
     @Override
     public Question add(String question, String answer) {
         throw new NotImplementedException();
@@ -33,7 +41,6 @@ public class MathQuestionService implements QuestionService {
 
     @Override
     public Question getRandomQuestion() {
-        Random random = new Random();
         int a = random.nextInt(100);
         int b = random.nextInt(100);
         int operation = random.nextInt(4);

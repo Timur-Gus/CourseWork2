@@ -9,10 +9,14 @@ import java.util.Random;
 
 @Service
 public class JavaQuestionService implements QuestionService {
-    JavaQuestionRepository questionRepository;
+    private final JavaQuestionRepository questionRepository;
 
     public JavaQuestionService() {
         questionRepository = new JavaQuestionRepository();
+    }
+
+    public JavaQuestionService(JavaQuestionRepository questionRepository) {
+        this.questionRepository = questionRepository;
     }
 
     @Override
